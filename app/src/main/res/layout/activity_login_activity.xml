@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".MainActivity"
+                                                   android:background="@drawable/background">
+
+
+    <TextView
+            android:text="@string/login_activity_title"
+            android:layout_width="318dp"
+            android:layout_height="47dp"
+            android:id="@+id/login_activity_title" android:textColor="@color/colorWhite"
+            android:textColorHighlight="@color/colorWhite" android:textColorHint="@color/colorWhite"
+            android:textColorLink="@color/colorWhite" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintVertical_bias="0.076" android:textSize="36sp" android:gravity="center"/>
+    <TextView
+            android:text="@string/email_field"
+            android:layout_width="116dp"
+            android:layout_height="38dp"
+            android:id="@+id/title" android:textColor="@color/colorWhite"
+            android:textColorHighlight="@color/colorWhite" android:textColorHint="@color/colorWhite"
+            android:textColorLink="@color/colorWhite" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.157"
+            app:layout_constraintVertical_bias="0.177" android:textSize="24sp"/>
+    <TextView
+            android:text="@string/password_field"
+            android:layout_width="122dp"
+            android:layout_height="38dp"
+            android:id="@+id/password_label" android:textColor="@color/colorWhite"
+            android:textColorHighlight="@color/colorWhite" android:textColorHint="@color/colorWhite"
+            android:textColorLink="@color/colorWhite" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.175"
+            app:layout_constraintVertical_bias="0.428" android:textSize="24sp"/>
+    <EditText
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/emailfield" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.458" app:layout_constraintVertical_bias="0.241"
+            android:textColor="@android:color/black" android:textColorHighlight="@color/colorWhite"
+            android:textColorHint="@color/colorWhite" android:textColorLink="@color/colorWhite"
+            android:textSize="24sp" android:shadowColor="@color/colorWhite" android:background="@color/colorWhite"
+            android:importantForAutofill="no" />
+    <EditText
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/password_field"
+            android:textSize="24sp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:background="@color/colorWhite"
+            android:textColor="@android:color/black" android:textColorHighlight="@color/colorWhite"
+            android:textColorHint="@color/colorWhite" android:textColorLink="@color/colorWhite"
+            android:importantForAutofill="no"/>
+    <Button
+            android:text="@string/go"
+            android:layout_width="193dp"
+            android:layout_height="68dp"
+            android:id="@+id/login_btn" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintVertical_bias="0.718" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:textSize="24sp"
+            android:textColor="@color/colorWhite" android:textColorHighlight="@color/colorWhite"
+            android:textColorHint="@color/colorWhite" android:background="@color/colorPrimary"
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>

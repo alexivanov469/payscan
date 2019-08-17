@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">payscan</string>
+    <string name="login_activity_title">LOGIN/REGISTER</string>
+    <string name="email_field">Email</string>
+    <string name="password_field">password</string>
+    <string name="go">Go</string>
+
+
 </resources>
