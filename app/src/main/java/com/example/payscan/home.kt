@@ -28,6 +28,7 @@ class home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         )
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
+        
 
 
         val fragmentManager = supportFragmentManager
