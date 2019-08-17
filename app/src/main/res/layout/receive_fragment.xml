@@ -22,7 +22,7 @@
             android:layout_height="60dp"
             android:inputType="numberDecimal"
             android:ems="10"
-            android:id="@+id/password_field"
+            android:id="@+id/receive_amount"
             android:textSize="24sp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginRight="8dp" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginTop="8dp"
@@ -31,21 +31,31 @@
             android:textColor="@android:color/black" android:textColorHighlight="@color/colorWhite"
             android:textColorHint="@color/colorWhite" android:textColorLink="@color/colorWhite"
             android:importantForAutofill="no" app:layout_constraintHorizontal_bias="0.494"
-            app:layout_constraintVertical_bias="0.398"/>
+            app:layout_constraintVertical_bias="0.172"/>
 
     <Button
             android:text="@string/generate_qr"
             android:layout_width="193dp"
             android:layout_height="68dp"
-            android:id="@+id/login_btn" android:layout_marginTop="8dp"
+            android:id="@+id/generate_qr" android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"
-            app:layout_constraintVertical_bias="0.718" android:layout_marginEnd="8dp"
+            app:layout_constraintVertical_bias="0.851" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:textSize="24sp"
             android:textColor="@color/colorWhite" android:textColorHighlight="@color/colorWhite"
             android:textColorHint="@color/colorWhite" android:background="@color/colorPrimary"
+    />
+    <ImageView
+            android:layout_width="288dp"
+            android:layout_height="193dp"
+            android:id="@+id/qr_code" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.437" app:layout_constraintHorizontal_bias="0.439"
     />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

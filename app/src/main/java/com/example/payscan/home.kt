@@ -28,7 +28,11 @@ class home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         )
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
-        
+
+
+        getIntent()
+        val token = intent.getStringExtra("token")
+        println(token)
 
 
         val fragmentManager = supportFragmentManager

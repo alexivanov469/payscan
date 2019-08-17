@@ -29,6 +29,7 @@ import org.json.JSONObject
 
 class Person(val email: String)
 class Auth(val token:String)
+
 class MainActivity : AppCompatActivity() {
 
     val client = OkHttpClient()
@@ -40,7 +41,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_activity)
         supportActionBar?.setDisplayShowTitleEnabled(false)
+        val intent = Intent(this, home::class.java)
+        intent.putExtra("EXIT", true)
 
+
+        startActivity(intent)
         val login_button = findViewById<Button>(R.id.login_btn)
         login_button.setOnClickListener {
             val emailField = findViewById<EditText>(R.id.emailfield)
@@ -90,6 +95,12 @@ class MainActivity : AppCompatActivity() {
                     .parse<Auth>(response.body!!.string())
                 val token = auth_result?.token
 
+
+                    val intent = Intent(this, home::class.java)
+                    intent.putExtra("EXIT", true)
+                intent.putExtra("token", token)
+                    startActivity(intent)
+
             }else{
                 val url ="http://68.183.159.53:8000/api/token-auth/"
 
@@ -108,6 +119,12 @@ class MainActivity : AppCompatActivity() {
                 val auth_result = Klaxon()
                     .parse<Auth>(response.body!!.string())
                 val token = auth_result?.token
+
+                val intent = Intent(this, home::class.java)
+                intent.putExtra("EXIT", true)
+                intent.putExtra("token", token)
+                startActivity(intent)
+
 
             }
 
