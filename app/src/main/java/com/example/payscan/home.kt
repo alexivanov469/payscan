@@ -67,23 +67,24 @@ class home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_home -> {
-                // Handle the camera action
+                val fragmentManager = supportFragmentManager
+                val fragmentTransaction = fragmentManager.beginTransaction()
+                val fragmentHome = home_fragment()
+                fragmentTransaction.replace(R.id.fragment_placeholder, fragmentHome)
+                fragmentTransaction.commit()
             }
-            R.id.nav_gallery -> {
+            R.id.nav_charge -> {
 
             }
-            R.id.nav_slideshow -> {
+
+            R.id.nav_transaction_history ->{
 
             }
-            R.id.nav_tools -> {
+
+            R.id.nav_funding_history ->{
 
             }
-            R.id.nav_share -> {
 
-            }
-            R.id.nav_send -> {
-
-            }
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         drawerLayout.closeDrawer(GravityCompat.START)
