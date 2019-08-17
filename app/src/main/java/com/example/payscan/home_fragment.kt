@@ -1,5 +1,6 @@
 package com.example.payscan
 
+import android.content.Intent
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -31,6 +32,11 @@ class home_fragment : Fragment() {
             val fragmentReceive = receive()
             fragmentTransaction?.replace(R.id.fragment_placeholder, fragmentReceive)
             fragmentTransaction?.commit()
+        }
+
+        view.pay_btn.setOnClickListener { view ->
+            val intent = Intent(activity, pay::class.java)
+            startActivity(intent)
         }
         return view
     }
