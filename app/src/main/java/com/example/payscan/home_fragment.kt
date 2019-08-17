@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.home_fragment_fragment.view.*
 
 
 class home_fragment : Fragment() {
@@ -20,7 +21,18 @@ class home_fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.home_fragment_fragment, container, false)
+
+
+        val view: View = inflater!!.inflate(R.layout.home_fragment_fragment, container, false)
+
+        view.receive_btn.setOnClickListener { view ->
+            val fragmentManager = getFragmentManager()
+            val fragmentTransaction = fragmentManager?.beginTransaction()
+            val fragmentReceive = receive()
+            fragmentTransaction?.replace(R.id.fragment_placeholder, fragmentReceive)
+            fragmentTransaction?.commit()
+        }
+        return view
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
