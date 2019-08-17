@@ -20,12 +20,7 @@ class home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         setContentView(R.layout.activity_home)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-
-        val fab: FloatingActionButton = findViewById(R.id.fab)
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
+        supportActionBar?.setDisplayShowTitleEnabled(false)
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val toggle = ActionBarDrawerToggle(
@@ -34,6 +29,12 @@ class home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
+
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        val fragmentHome = home_fragment()
+        fragmentTransaction.replace(R.id.fragment_placeholder, fragmentHome)
+        fragmentTransaction.commit()
         navView.setNavigationItemSelectedListener(this)
     }
 

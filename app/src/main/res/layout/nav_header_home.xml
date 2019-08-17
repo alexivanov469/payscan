@@ -16,9 +16,8 @@
     <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="@dimen/nav_header_vertical_spacing"
-            app:srcCompat="@drawable/payscan_logo"
+            app:srcCompat="@drawable/logo"
             android:contentDescription="@string/nav_header_desc"
-            android:id="@+id/imageView" android:background="#7F9CA8"/>
+            android:id="@+id/imageView" android:background="@android:color/transparent"/>
 
 </LinearLayout>
